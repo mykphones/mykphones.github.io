@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>creating MySQL Database</title>
+</head>
+<body>
+<?php
+$dbhost='localhost:3036';
+$dbuser='root';
+$dbpass='rootpassword';
+$conn=mysql_connect($dbhost,$dbuser,$db pass);
+if(! $conn)
+{
+die('could not connect:'.mysql_error());
+}
+echo 'connected successfully<br />';
+$sql='CREATE DATABASE TUTORIAL';
+$retval =mysql_query($sql,$sql,$conn);
+if (! $retval )
+{
+die('could not create database :'.mysql_error());
+}
+echo "Database TUTORIALS created successfully\n";
+mysql_close($conn);
+?>
+,
+</body>
+</html>
